@@ -1,0 +1,85 @@
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            <h3>Товары</h3>
+            <a href="/admin/products/add" class="nav btn btn-success button-primary button-240">
+                 Добавить новый товар
+            </a>
+        </p>
+    </div>
+</div>
+<table  class="table table-striped table-center">
+        <tr>
+            <td>id</td>
+            <td>Категория</td>
+            <td>Бренд</td>
+            <td>Название</td>
+            <td>Картинка</td>
+            <td>Вес</td>
+            <td>Арабика</td>
+            <td>Робуста</td>
+            <td>Обжарка</td>
+            <td>Цена</td>
+            <td>Страна </td>
+            <td>Описание </td>
+            <td>Наличие </td>
+            <td>Действие </td>
+        </tr>
+
+    <?php foreach ($data['pages'] as $value):?>
+    <tr>
+        <td><?=$value['id']?></td>
+        <td>
+            <?php foreach($data['categories'] as $cat):?>
+            <?php if($cat['id'] == $value['id_categories']):?>
+            <?=$cat['name']?>
+            <?php endif;?>
+            <?php endforeach; ?>
+        </td>
+        <td><?=$value['brand']?></td>
+        <td><?=$value['name']?></td>
+        <td>
+            <!--<img style="width: 100px" src="http://minionomaniya.ru/wp-content/uploads/2016/01/%D0%9A%D0%B5%D0%B2%D0%B8%D0%BD.jpg">-->
+            <?php if(isset($value['img_path'])):?>
+            <img style="width: 100px" src="<?=$value['img_path']?>">
+            <?php endif;?>
+        </td>
+        <td><?=$value['weight']?>г</td>
+        <td><?=$value['sort_arabica']?>%</td>
+        <td><?=$value['sort_robusta']?>%</td>
+        <td><?=$value['roasting']?></td>
+        <td><?=$value['price']?></td>
+        <td><?=$value['country']?></td>
+        <td><?=mb_substr($value['description'],0,100,'UTF-8')?> ...</td>
+        <td><?=($value['stock']?'есть':'нет')?></td>
+        <!--<td>-->
+            <!--<input disabled type="checkbox" <?=($value['stock'])? "checked" : "" ?>>-->
+        <!--</td>-->
+
+        <!--<td>-->
+            <!--<input disabled type="checkbox" <?=($value['is_published'])? "checked" : "" ?>>-->
+        <!--</td>-->
+        <td>
+            <a href="/admin/products/edit/<?=$value['id']?>"><button class="btn btn-xs button-120 btn-primary">Редактировать</button></a><hr>
+            <a href="/admin/products/delete/<?=$value['id']?>" onclick="return confirm('Вы точно хотите удалить товар. Это действие удалит его безвозвратно');"><button class="btn btn-xs button-120 btn-danger">Удалить</button></a>
+        </td>
+    </tr>
+    <?php endforeach;?>
+</table>
+
+<div style="text-align: center">
+    <?php
+
+        $count_pages = $data['count_for_paginatior'];
+
+        if(!empty($data['pagination'])){
+            $active = $data['pagination'];
+        } else {
+            $active = 1;
+        }
+        $count_show_pages = 5;
+        $url = "/admin/products/index/1";
+        $url_page = "/admin/products/index/";
+        paginator($count_pages, $active, $count_show_pages, $url, $url_page);
+    ?>
+</div>

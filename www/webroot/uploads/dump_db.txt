@@ -1,0 +1,37 @@
+CREATE DATABASE mvc;
+
+use mvc;
+
+CREATE TABLE `pages`(
+    `id` tinyint(3) unsigned not null AUTO_INCREMENT,
+    `alias` varchar(100) not null,
+    `title` varchar(100) not null,
+    `content` text DEFAULT null,
+    `is_published` tinyint(1) unsigned DEFAULT 0,
+    PRIMARY KEY(`id`))
+    ENGINE=INNODB DEFAULT charset=utf8;
+
+INSERT INTO `pages`
+VALUES (1,'about','About Us','Test content',1),
+		(2,'test','Test page','Another test content',1);
+
+CREATE TABLE `messages`(
+    `id` tinyint(3) unsigned not null AUTO_INCREMENT,
+    `name` varchar(100) not null,
+    `email` varchar(100) not null,
+    `message` text DEFAULT null,
+    PRIMARY KEY(`id`))
+    ENGINE = INNODB DEFAULT charset=utf8;
+
+CREATE TABLE `users`(
+    `id` smallint(5) unsigned not null AUTO_INCREMENT,
+    `login` varchar(45) not null,
+    `email` varchar(100) not null,
+    `role` varchar(45) not null default 'admin',
+    `password` char(32) not null,
+    `is_active` tinyint(1) unsigned DEFAULT '1',
+    PRIMARY KEY(`id`))
+    ENGINE=INNODB DEFAULT CHARSET=utf8;
+    
+    
+    

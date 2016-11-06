@@ -1,0 +1,471 @@
+body{
+    padding-top: 10px;
+    font-family: Century Gothic;
+
+    }
+
+#top-bar {
+    text-align: center;
+    background: #dac6ad;
+    color: #783c1a;
+    padding: 5px 0;
+    margin: 0;
+}
+
+#top-bar.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Century Gothic";
+}
+.wrapper{
+    max-width: 1300px;
+    display: block;
+    /*осн часть по середине*/
+    margin: 0 auto;
+}
+
+.top-img {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    z-index: 1;
+    list-style-type: none;
+    float: left;
+
+
+}
+.top-img img{
+    height: 55px;
+}
+#logo-text {
+    font-size: 27px;
+    font-weight: bold;
+    font-family: Century;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    margin-left: 30px;
+    padding-top: 5px;
+
+
+}
+#logo-text a{
+    text-decoration: none;
+    color: #783c1a;
+    letter-spacing: 1px;
+}
+
+ul.top-phones {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+    list-style-type: none;
+    float: left;
+    height: 55px;
+    border-left: 1px solid #783c1a;
+    border-right: 1px solid #783c1a;
+    font-size: 18px;
+}
+ul.top-phones li span.code {
+    font-size: 16px;
+    font-weight: bold;
+}
+.search{
+    border: 1px solid #783c1a;
+    border-radius: 3px;
+    padding-left: 10px;
+
+}
+#search-btn{
+    border: 1px solid #783c1a;
+    border-radius: 3px;
+    background: #dac6ad;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+#search-btn:hover {
+    background: #b87d3b;
+
+    }
+.search-block{
+    margin: 0;
+    padding-top: 10px;
+    padding-right: 40px;
+    text-align: left;
+    display: inline-block;
+    list-style-type: none;
+    float: left;
+    height: 55px;
+    border-right: 1px solid #783c1a;
+    font-size: 16px;
+    font-family: "Century Gothic";
+}
+.cart-block{
+    margin-top: 5px;
+    font-family: "Century Gothic";
+    font-size: 16px;
+}
+
+#main-nav
+{
+    max-width: 1300px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+}
+#main-nav ul li{
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: inline-block;
+    z-index: 1;
+    width: 120px;
+    float: left;
+}
+
+#main-nav ul li a {
+    font-size: 16px;
+    color: #783c1a;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: "Century Gothic";
+}
+
+#main-nav ul li:hover {
+    /*background-color: beige;*/
+}
+#main-nav ul li a:hover {
+    color: #b87d3b;
+}
+#left-nav{
+    margin-left: 60px;
+    /*height: 350px;*/
+    height: auto;
+    overflow: auto;
+    padding-bottom: 25px;
+    width: 250px;
+    background-color:#dac6ad;
+    border-radius: 2px;
+    display: block;
+}
+#left-nav ul{
+    padding: 0px;
+    margin-left: 25px;
+}
+#left-nav ul li {
+    margin: 20px 0 0 0;
+    padding: 0 0 10px 0;
+    display: inline-block;
+    width: 200px;
+    float: left;
+    border-bottom: 2px solid white;
+
+}
+
+#left-nav ul li a {
+    font-size: 16px;
+    color: #783c1a;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: "Century Gothic";
+    text-decoration: none;
+    text-align: center;
+}
+#left-nav ul li a:hover{
+    color: #b87d3b;
+}
+#whide-search{
+    margin-left: 60px;
+    margin-top: 30px;
+    height: auto;
+    overflow: auto;
+    padding-bottom: 25px;
+    width: 250px;
+    background-color:#dac6ad;
+    border-radius: 2px;
+    display: block;
+    font-family: "Century Gothic";
+    color: #783c1a;
+    font-size: 15px;
+}
+#whide-search-container{
+    margin: 25px;
+}
+.separator hr{
+    background-color: white;
+    height: 1px;
+    border-color: white;
+    border-width: 1px;
+}
+#brand-filter{
+    overflow: auto;
+    padding: 0px 5px;
+    font-family: "Century Gothic";
+    color: #783c1a;
+    font-size: 14px;
+    background-color: whitesmoke;
+}
+#brand-filter option{
+    background-color: whitesmoke;
+}
+#country-filter{
+    overflow: auto;
+    padding: 0px 5px;
+    font-family: "Century Gothic";
+    color: #783c1a;
+    font-size: 14px;
+    background-color: whitesmoke;
+}
+#country-filter option{
+    background-color: whitesmoke;}
+
+/*фильтр по цене */
+
+
+
+/*фильтр по цене - конец */
+
+
+
+
+.sort-text{
+    padding: 0px;
+    padding-top: 18px;
+    height: 55px;
+    border-radius: 2px;
+    background:#dac6ad ;
+    font-size: 16px;
+    color: #783c1a;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.sort-text span a{
+    display: inline-block ;
+    color: #783c1a;
+    text-decoration: none;
+    font-weight: bold;
+}
+.sort-text span a:hover{
+    color: #b87d3b;
+}
+#gl-grid{
+    color: #b87d3b;
+}
+#gl-list{
+    color: #783c1a;
+}
+.srch-txt{
+    font-size: 16px;
+    color: #783c1a;
+    text-transform: lowercase;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+
+#sort{
+    font-size: 12px;
+    letter-spacing: 0px;
+    float: right;
+}
+.content{
+    margin-top: 0px;
+    font-family: "Century Gothic";
+}
+
+.item{
+    border: 2px solid #dac6ad;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 30px;
+    height: 320px;
+}
+.list-view{
+    border: 2px solid #dac6ad;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    height: 240px;
+}
+.list-view-search{
+    border: 2px solid #dac6ad;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    height: 240px;
+    height: auto;
+    display: block;
+    overflow: auto;
+}
+
+
+.list-view:hover{
+    border: 2px ridge #dac6ad;
+    border-radius: 4px;
+}
+.list-view-img{
+    display: inline-block;
+}
+.list-view-img img{
+    height: 210px;
+    max-width: 210px;
+    margin: auto ;
+    display: block;
+    float:left ;
+}
+.list-view-name{
+    display: inline-block;
+}
+.list-view-name a p{
+    font-size: 18px;
+    color: #783c1a;
+    font-weight: bold;
+    margin-top: 10px;
+
+}
+.description{
+    font-size: 14px;
+    height: 120px;
+}
+#grid_format{
+    display: block;
+}
+#list_format{
+    display: none;
+}
+.item-main{
+    border: 1px solid #dac6ad;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 0px;
+    display: block;
+    /*height: 500px;*/
+    height: auto;
+    overflow: auto;
+}
+.item:hover{
+    border: 3px ridge #dac6ad;
+    border-radius: 4px;
+}
+.item-img img{
+    height: 180px;
+    max-width: 180px;
+    margin: auto ;
+    display: block;
+}
+.item-main img{
+    height: 280px;
+    max-width: 280px;
+    margin: auto ;
+    display: block;
+}
+.item-name a {
+    font-size: 16px;
+    color: #783c1a;
+    font-weight: bold;
+    display: inline-block ;
+    padding-left: 10px;
+}
+.item-main-name {
+    font-size: 18px;
+    color: #783c1a;
+    font-weight: bold;
+    display: inline-block ;
+    padding-left: 10px;
+}
+.item-name a :hover {
+    font-size: 16px;
+    /*color: #783c1a;*/
+    text-decoration: none;
+
+    text-decoration: none;
+}
+.item-price,.item-cart{
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+    padding-left: 10px;
+
+
+}
+.item-price span{
+    font-size: 25px;
+    color: #783c1a;
+
+}
+.item-cart a{
+    color: #783c1a;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#footer{
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    background: #dac6ad;
+    color: #783c1a;
+    padding: 5px 0;
+}
+#footer .wrapper{
+    max-width: 1300px;
+}
+.footter-phones{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    list-style-type: none;
+    float: left;
+    height: 75px;
+    border-left: 1px solid #783c1a;
+    border-right: 1px solid #783c1a;
+    font-size: 18px;
+}
+.footter-phones a{
+    text-decoration: none;
+    color: #783c1a;
+    font-weight: bolder;
+    font-size: 16px;
+
+}
+.copyright{
+    font-family: "Century Gothic";
+    text-align:center;
+    margin-left: 55px;
+    margin-top: 10px;
+}
+#main-admin-header-image{
+    width: 30%;
+    margin: auto;
+    display: block
+}
+#admin_menu{
+    display: inline-block;
+    margin:  0 auto;
+}
+.button-120{
+    width: 120px;
+}
+.form-40{
+    width: 40%;
+    margin: auto;
+    display: block
+}
+.form-50-left{
+    width: 50%;
+    display: block
+}
+.button-240{
+    width: 240px;
+}

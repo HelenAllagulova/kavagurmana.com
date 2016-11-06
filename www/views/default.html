@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?=Config::get('site_name')?></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="/js/products_format.js"></script>
+    <script src="/js/ajax.js"></script>
+
+
+
+</head>
+<body>
+    <div>
+        <!--header-->
+        <div id="top-bar">
+            <div class="wrapper row">
+                <div class="col-md-4 top-img">
+                    <a href="/" style="text-decoration: none;"> <img  src="/img/logo.png"> </a>
+                        <div id="logo-text"><a href="/">
+                        KAVA
+
+                        GURMANA
+
+                        </a>
+                        </div>
+
+                </div>
+                <div class="col-md-3">
+                    <ul class="top-phones">
+                        <li>
+                            <span class="code">/050/</span>
+                            <b>4220190</b>
+                        </li>
+                        <li>
+                            <span class="code">/097/</span>
+                            <b>0990175</b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <div class="search-block col-md-6">
+                        <form action="/products/search" method="post">
+                            <input type="text" name="search" class="search" placeholder="Поиск">
+                            <button type="submit" id="search-btn">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="cart-block col-md-6">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> в корзине <br>
+                        <span><strong>0</strong></span> товаров на сумму
+                        <span><strong>0</strong></span> грн.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--main nav panel-->
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="main-nav">
+
+                        <ul >
+                            <li><a href="/">главная</a></li>
+                            <li><a href="/pages/delivery">доставка</a></li>
+                            <li><a href="/pages/payment">оплата </a></li>
+                            <li><a href="/pages/contacts">контакты</a></li>
+                            <!--<li><a>поиск</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="left-nav">
+                                    <ul >
+                                        <!--Меню категорий товаров-->
+                                        <?=$data['left_categories_bar']?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <?=$data['left_filter']?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="content">
+                            <!--Контент-->
+                            <?=$data['content']?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="wrapper row">
+                <div class="col-md-3 copyright">
+                    Все права защищены<br>
+                    Интернет магазин <br>
+                    «KavaGurmana» &#169;  2016
+                </div>
+                <div class="col-md-3">
+                    <ul class="footter-phones">
+                        <li>
+                            <span class="code">/050/</span>
+                            <b>4220190</b>
+                        </li>
+                        <li>
+                            <span class="code">/097/</span>
+                            <b>0990175</b>
+                        </li>
+                        <li>
+                            <a href="mailto:info@kavagurmana.com.ua">info@kavagurmana.com.ua</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5" style="font-family: Century Gothic">
+                    Способы оплаты:
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span style="display: none" id="sub_timer"><?=Session::get('timer');?></span>
+    <span style="display: none" id="show_timer"></span>
+    <div style="display: none; padding: 100px; margin: 100px">
+        <div class="modalInner">
+            <section class="offer">
+                <form style="background-color: white; width: 400px; border: 20px solid white" role="form">
+                    Добрый день! Меня зовут Алёна Аллагулова и я рада приветсвовать Вас на моем
+                    сайте kavagurmana.com - сайт настоящих ценителей кофе. Магазин
+                    находится в активной разработке. Для сотрудничества обращайтесь по
+                    контактам указанным на сайте.<br><br>
+
+                        <button class="btn btn-sm btn-default" style="margin: 0 auto;  display: block" onclick="close_window()">перейти к сайту</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+
+    <link rel="stylesheet" href="/js/subscribe_window/jquery.arcticmodal.css">
+    <script src="/js/subscribe_window/config.js"></script>
+    <script src="/js/subscribe_window/jquery.arcticmodal.js"></script>
+
+</body>
+</html>

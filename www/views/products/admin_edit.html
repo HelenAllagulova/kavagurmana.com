@@ -1,0 +1,75 @@
+
+<form role="form" id="products_form" class="form-50-left" method="post" action="" enctype="multipart/form-data">
+    <input  hidden type="text" name="id" value="<?=$data['product']['id']?>">
+    <div class="form-group">
+        <label>Выберите категорию</label>
+        <select class="input-120 form-control" name="id_categories">
+            <?php foreach($data['page'] as $categories):?>
+                    <?php if($categories['id'] == $data['product']['id_categories']){ ?>
+                        <option selected value="<?=$categories['id']?>"><?=$categories['name']?></option>
+                    <?php } else { ?>
+                    <option value="<?=$categories['id']?>"><?=$categories['name']?></option>
+               <?php } ?>
+            <?php endforeach; ?>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Бренд</label>
+        <input class="form-control" type="text" name="brand" form="products_form"  value="<?=$data['product']['brand']?>">
+    </div>
+    <div class="form-group">
+        <label>Название</label>
+        <input class="form-control" type="text" name="name" form="products_form"  value="<?=$data['product']['name']?>">
+    </div>
+
+    <div class="form-group" style="display: block; height: 125px">
+        <div style="display: block; float: left; width: 40%; height: 125px;" >
+            <label>Картинка</label><br>
+        <img style="height: 100px" name="image" src="<?=$data['product']['img_path']?>">
+        </div>
+        <div style="display: block; float: right;width: 60%; height: 125px">
+        <label>Заменить картинку</label><br>
+        <input type="file" name="image" accept="image/*" form="products_form">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label>Вес</label>
+        <input class="form-control" type="text" name="weight" form="products_form"  value="<?=$data['product']['weight']?>">
+    </div>
+    <div class="form-group">
+        <label>Состав: арабика, %</label>
+        <input class="form-control" type="text" name="sort" form="products_form"  value="<?=$data['product']['sort_arabica']?>">
+    </div>
+    <div class="form-group">
+        <label>Состав: робуста, %</label>
+        <input class="form-control" type="text" name="sort" form="products_form"  value="<?=$data['product']['sort_robusta']?>">
+    </div>
+    <div class="form-group">
+        <label>Обжарка</label>
+        <input class="form-control" type="text" name="roasting" form="products_form"  value="<?=$data['product']['roasting']?>">
+    </div>
+    <div class="form-group">
+        <label>Цена</label>
+        <input class="form-control" type="text" name="price" form="products_form"  value="<?=$data['product']['price']?>">
+    </div>
+    <div class="form-group">
+        <label>Страна</label>
+        <input class="form-control" type="text" name="country" form="products_form"  value="<?=$data['product']['country']?>">
+    </div>
+    <div class="form-group">
+        <label>Описание</label>
+        <textarea id="textarea-1100" class="form-control" type="text" name="description" form="products_form"><?=$data['product']['description']?></textarea>
+    </div>
+    <div>
+        <label>Наличие на складе</label>
+        <input type="checkbox" name="stock" form="products_form" <?=($data['product']['stock'])? "checked" : "" ?> >
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="button-120 btn btn-success" form="products_form">Сохранить</button>
+    </div>
+</form>
+

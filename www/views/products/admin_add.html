@@ -1,0 +1,70 @@
+<form role="form" class="form-50-left" id="products_form" method="post" action="" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Выберите категорию</label>
+        <select class="input-120 form-control" name="id_categories">
+            <?php foreach($data['page'] as $categories):
+                ?>
+                <option value="<?=$categories['id']?>"><?=$categories['name']?></option>
+            <?php
+            endforeach; ?>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Бренд</label>
+        <input class="input-240 form-control" type="text" required name="brand" placeholder="бренд" form="products_form">
+    </div>
+    <div class="form-group">
+        <label>Название</label>
+        <input class="input-240 form-control" type="text" required name="name" placeholder="название" form="products_form">
+    </div>
+    <div class="form-group" style="display: block; height: 55px">
+        <div>
+            <label>Выберете картинку</label><br>
+            <input type="file" name="image" accept="image/*" form="products_form">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Вес</label>
+        <input class="input-240 form-control" type="text" required name="weight" placeholder="вес" form="products_form">
+    </div>
+    <div class="form-group">
+        <label>Состав: арабика, %</label>
+        <input class="input-240 form-control" type="text" name="sort_arabica" placeholder="арабика" form="products_form">
+    </div>
+    <div class="form-group">
+        <label>Состав: робуста, %</label>
+        <input class="input-240 form-control" type="text" name="sort_robusta" placeholder="робуста" form="products_form">
+    </div>
+    <div class="form-group">
+        <label>Обжарка</label>
+        <input class="input-240 form-control" type="text" name="roasting" placeholder="степень обжарки" form="products_form">
+    </div>
+    <div class="form-group">
+        <label>Цена, грн</label>
+        <input class="input-240 form-control" type="text" required name="price" placeholder="цена" form="products_form">
+    </div>
+    <div class="form-group">
+        <label>Страна</label>
+        <input class="input-240 form-control" type="text" name="country" placeholder="страна изготовитель" form="products_form">
+    </div>
+
+
+    <div class="form-group">
+        <label>Описание</label>
+        <textarea id="textarea-1100" class="form-control" type="text" name="description" placeholder="описатие товара" form="products_form"></textarea>
+    </div>
+
+    <div>
+        <label>Наличие на складе</label>
+        <input type="checkbox" name="stock" form="products_form">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="button-120 btn btn-success" form="products_form">Создать</button>
+    </div>
+</form>
+
+<script>
+
+CKEDITOR.replace( 'content' , { width: '1000px', height: '300px' });
+</script>

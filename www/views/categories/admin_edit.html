@@ -1,0 +1,24 @@
+<div class="form-40">
+    <form role="form" action="" method="post">
+        <input  hidden type="text" name="id" value="<?=$data['categories']['id']?>">
+
+        <div class="form-group">
+            <label>Категория</label>
+            <input class="form-control" type="text" name="name" value="<?=$data['categories']['name']?>">
+        </div>
+
+        <div class="form-group">
+            <label>Порядок показа</label>
+            <input class="form-control" type="text" name="show_method" value="<?=$data['categories']['show_method']?>">
+        </div>
+
+        <div >
+            <label>Опубликовано</label>
+            <input type="checkbox" name="is_published" <?=($data['categories']['is_published'])? "checked" : "" ?> >
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success" type="submit">Сохранить запись</button>
+        </div>
+    </form>
+</div>

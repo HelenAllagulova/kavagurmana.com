@@ -1,0 +1,67 @@
+
+<div class="col-md-12 sort-text">
+   <span class="srch-txt">по вашему запросу: </span> &nbsp;
+    <span><?=$data['search']?></span>&nbsp;
+    <span class="srch-txt"> найдено </span>&nbsp;
+    <span><?=isset($data['count'])? $data['count']:0?></span>&nbsp;
+    <span class="srch-txt"> товаров </span>
+</div>
+<div class="col-md-12">
+    <br>
+    <?=!empty($data['msg'])?$data['msg']:'';?>
+
+    <!--вывод продуктов списком-->
+    <div id="lis_format">
+      <?php if(isset($data['pages'])):?>
+        <?php foreach($data['pages'] as $page){ ?>
+        <div  class="col-sm-12 col-md-12 ">
+            <div class="list-view-search">
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="list-view-img">
+                            <a href="/products/item/<?=$page['id']?>" >
+                                <img src="<?=$page['img_path']?>" alt="<?=$page['name']?>">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <div class="list-view-name">
+                            <a href="/products/item/<?=$page['id']?>" >
+                                <p><?=$page['brand']?> <?=$page['name']?> <?=($page['weight']==1000?'1кг':"{$page['weight']} г");?></p>
+                            </a>
+                        </div>
+
+                        <div class="description-search">
+
+                                <!--<p><?=mb_substr($page['description'],0,370,'UTF-8').'...'?></b></p>-->
+                                <p><?=$page['description']?></b></p>
+
+                        </div>
+                        <div class="item-price"><span><?=$page['price']?> </span>грн</div>
+                        <div class="item-cart">
+                            <a><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> купить</a>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+        <?php } ?>
+      <?php endif;?>
+    </div>
+</div>
+<div class="col-md-12" style="text-align: center; margin-top: 20px">
+    <?php
+    if(isset($data['count_for_paginatior'])){
+        $count_pages = $data['count_for_paginatior'];
+        if(!empty($data['pagination'])){
+            $active = $data['pagination'];
+        } else {
+            $active = 1;
+        }
+        $count_show_pages = 5;
+        $url = "/products/search/{$data['search']}/1";
+        $url_page = "/products/search/{$data['search']}/";
+        paginator($count_pages, $active, $count_show_pages, $url, $url_page);
+    }
+    ?>
+</div>
