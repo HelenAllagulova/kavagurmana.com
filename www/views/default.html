@@ -20,43 +20,44 @@
     <div>
         <!--header-->
         <div id="top-bar">
-            <div class="wrapper row">
-                <div class="col-md-4 top-img">
-                    <a href="/" style="text-decoration: none;"> <img  src="/img/logo.png"> </a>
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-md-4 top-img">
+                        <a href="/" style="text-decoration: none;"> <img  src="/img/logo.png"> </a>
                         <div id="logo-text"><a href="/">
-                        KAVA
+                            KAVA
 
-                        GURMANA
+                            GURMANA
 
                         </a>
                         </div>
-
-                </div>
-                <div class="col-md-3">
-                    <ul class="top-phones">
-                        <li>
-                            <span class="code">/050/</span>
-                            <b>4220190</b>
-                        </li>
-                        <li>
-                            <span class="code">/097/</span>
-                            <b>0990175</b>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-5">
-                    <div class="search-block col-md-6">
-                        <form action="/products/search" method="post">
-                            <input type="text" name="search" class="search" placeholder="Поиск">
-                            <button type="submit" id="search-btn">
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                            </button>
-                        </form>
                     </div>
-                    <div class="cart-block col-md-6">
-                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> в корзине <br>
-                        <span><strong>0</strong></span> товаров на сумму
-                        <span><strong>0</strong></span> грн.
+                    <div class="col-md-3">
+                        <ul class="top-phones">
+                            <li>
+                                <span class="code">/050/</span>
+                                <b>4220190</b>
+                            </li>
+                            <li>
+                                <span class="code">/097/</span>
+                                <b>0990175</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="search-block col-md-6">
+                            <form action="/products/search" method="post">
+                                <input type="text" name="search" class="search" placeholder="Поиск">
+                                <button type="submit" class="search-btn">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="cart-block col-md-6">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> в корзине <br>
+                            <span><strong>0</strong></span> товаров на сумму
+                            <span><strong>0</strong></span> грн.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -66,7 +67,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div id="main-nav">
-
                         <ul >
                             <li><a href="/">главная</a></li>
                             <li><a href="/pages/delivery">доставка</a></li>
@@ -92,6 +92,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
+                                <!--Фильтр товаров-->
                                 <?=$data['left_filter']?>
                             </div>
                         </div>

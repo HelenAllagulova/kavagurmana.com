@@ -1,37 +1,50 @@
 <div id="whide-search" >
     <div id="whide-search-container">
-        <h4><b>ФИЛЬТР ТОВАРОВ</b></h4>
-        <form role="form" action="" method="post">
+        <div>
+            <span class="uc-title">Фильтр товаров</span>
+        </div>
+        <div class="separator"><hr></div>
+        <form role="form" action="/products/widesearch" method="post">
+            <div class="whide-search-head">
             Цена:<br>
-            <!--<input type="range" min="50" max="1000" step="1" value="500">-->
+            </div><br>
+            <input type="range" min="50" max="1000" step="1" value="500" >
 
 
 
 
 
             <div class="separator"><hr></div>
-            Изготовитель:<br>
-            <select class="form-control" id="brand-filter" multiple="multiple" size="<?=count($data['left_filter_brands'])+1?>" >
+            <div class="whide-search-head">
+                Изготовитель:<br>
+            </div>
+            <select name="brand[]" class="form-control" id="brand-filter" multiple="multiple" size="<?=count($data['left_filter_brands'])+1?>" >
                 <option selected disabled>выберете бренд</option>
                     <?php for($i = 0; $i<count($data['left_filter_brands']); $i++ ){?>
                     <option value="<?=strtolower($data['left_filter_brands'][$i]['brand'])?>"><?=strtolower($data['left_filter_brands'][$i]['brand'])?></option>
                     <?php } ?>
             </select>
             <div class="separator"><hr></div>
-            Вес:<br>
+            <div class="whide-search-head">
+                Вес:<br>
+            </div>
+
             <?php for($i = 0; $i<count($data['left_filter_weight']); $i++ ){?>
             <div class="checkbox">
-                <label><input type="checkbox" value="<?=$data['left_filter_weight'][$i]['weight']?>">
+                <label><input name="weight[]" type="checkbox" value="<?=$data['left_filter_weight'][$i]['weight']?>">
                     <?=$data['left_filter_weight'][$i]['weight']?> г
                 </label>
             </div>
             <?php } ?>
 
             <div class="separator"><hr></div>
-            Состав:<br>
+            <div class="whide-search-head">
+                Состав:<br>
+            </div>
+
             <?php for($i = 0; $i<count($data['left_filter_sort']); $i++ ){?>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="<?=$data['left_filter_sort'][$i]['sort_arabica']?>">
+                    <label><input name="sort_arabica[]" type="checkbox" value="<?=$data['left_filter_sort'][$i]['sort_arabica']?>">
                         <?php if($data['left_filter_sort'][$i]['sort_arabica']==0){
                         echo '100% робусты';
                         }elseif($data['left_filter_sort'][$i]['sort_arabica']==100){
@@ -45,8 +58,11 @@
             <?php } ?>
 
             <div class="separator"><hr></div>
-            Страна производитель:<br>
-            <select class="form-control" id="country-filter" multiple="multiple" size="<?=count($data['left_filter_country'])+1?>">
+            <div class="whide-search-head">
+                Производитель:<br>
+            </div>
+
+            <select name="country[]" class="form-control" id="country-filter" multiple="multiple" size="<?=count($data['left_filter_country'])+1?>">
                 <option selected disabled>выберете страну</option>
                 <?php for($i = 0; $i<count($data['left_filter_country']); $i++ ){?>
                 <option value="<?=strtolower($data['left_filter_country'][$i]['country'])?>"><?=strtolower($data['left_filter_country'][$i]['country'])?></option>
@@ -54,7 +70,7 @@
             </select>
             <div class="separator"><hr></div>
             <button class="btn btn-xs btn-default" type="submit"><b>ПОИСК</b></button>
-            <button class="btn btn-xs btn-default" >очистить фильтр</button>
+            <!--<button class="btn btn-xs btn-default" >очистить фильтр</button>-->
         </form>
     </div>
 </div>

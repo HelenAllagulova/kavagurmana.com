@@ -73,7 +73,7 @@ function paginator($count_pages, $active, $count_show_pages, $url, $url_page)
 
             <?php for ($i = $start; $i <= $end; $i++) { ?>
                 <?php if ($i == $active) { unset($arr_ajax[$i-1]);?>
-                    <span class="btn btn-xs btn-primary"><?=$i?></span>
+                    <span  class="btn btn-xs search-btn"><?=$i?></span>
                 <?php } elseif(($i == ($end-1) && $end>=5 && $active != $count_pages && $active==1) ||
                     ($i == ($end-1) && $end>=5 && $active != $count_pages && $active!=1) ||
                     ($i == ($start+1) && $end>=5 && $active!=1)) { ?>

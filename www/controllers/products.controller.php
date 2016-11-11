@@ -47,13 +47,27 @@ class ProductsController extends Controller
             (!empty($this->params[0]) &&  strlen($this->params[0]))>=3)
         {
             $search = !empty($_POST['search']) ? $_POST['search']: $this->params[0];
-            $this->data['pages'] = $this->model->getByString($search,$this->data['pagination']);
+            $this->data['pages'] = $this->model->getByString($search, $this->data['pagination']);
             $this->data['count'] = $this->model->getCountSearch($search);
             $this->data['count_for_paginatior'] = (is_int($this->data['count']/5))? $this->data['count']/5 : floor($this->data['count']/5 + 1);
             $this->data['search'] = $search;
         } else {
             $this->data['msg'] = 'Ваш запрос должен содержать не менее 3-х символов';
         }
+    }
+    
+    public function widesearch(){
+        if(!empty($this->params[0])){
+            $this->data['pagination'] = $this->params[0];
+        } else {
+            $this->data['pagination'] = '';
+        }
+        $this->data['widesearch'] = $this->model->wide_search($_POST, $this->data['pagination']);
+        $this->data['count']= $this->data['widesearch'][0]['count'];
+        $this->data['count_for_paginatior'] = (is_int($this->data['count']/5))? $this->data['count']/5 : floor($this->data['count']/5 + 1);
+
+        $this->data['search'] = $this->data['widesearch'][0]['search'];
+
     }
 
     public function admin_index(){

@@ -15,7 +15,7 @@ class BarsModel extends Model{
         return $this->db->query($sql);
     }
     public function get_sort(){
-        $sql = "SELECT DISTINCT `sort_arabica` FROM `products` ORDER BY `sort_arabica`";
+        $sql = "SELECT DISTINCT `sort_arabica` FROM `products` ORDER BY `sort_arabica` DESC";
         return $this->db->query($sql);
     }
     public function get_country(){

@@ -205,4 +205,99 @@ class ProductsModel extends Model
         return $formated;
 
     }
+
+    public function wide_search($data,$pagination = false){
+        $sql = "SELECT * FROM products WHERE stock = 1";
+        $message = 'ДЕТАЛИ ЗАПРОСА<br>';
+        foreach($data as $key => $value)
+        {
+            switch ($key){
+                case 'brand':
+                    $message.= 'Бренд-изготовитель: ';
+                    $sql.= " AND (";
+                    if(is_array($value))
+                    {
+                        for($i = 0; $i < count($value); $i++)
+                        {
+                            ($i==0 ? $sql.= " {$key} LIKE '%{$value[$i]}%' ": $sql.= "OR {$key} LIKE '%{$value[$i]}%' " );
+                            $message.= " <b>$value[$i]</b> /";
+                        }
+                    } else
+                    {
+                        $sql.= " {$key} LIKE '%{$value}%' ";
+                        $message.= " $value ";
+                    }
+                    $sql.= ")";
+                    break;
+                case 'weight':
+                    $message.= '<br>Вес: ';
+                    $sql.= " AND {$key} IN (";
+                    if(is_array($value))
+                    {
+                        for($i = 0; $i < count($value); $i++)
+                        {
+                            ($i==(count($value)-1)? $sql.= "{$value[$i]})": $sql.= "{$value[$i]}, ");
+                            $message.= " <b>{$value[$i]} г.</b> /";
+                        }
+                    } else
+                    {
+                        $sql.= "{$value}) ";
+                        $message.= " <b>{$value} г.</b>  ";
+                    }
+
+                    break;
+                case 'sort_arabica':
+                    $message.= '<br>Содержание арабики: ';
+                    $sql.= " AND {$key} IN (";
+                    if(is_array($value))
+                    {
+                        for($i = 0; $i < count($value); $i++)
+                        {
+                            ($i==(count($value)-1)? $sql.= "{$value[$i]})": $sql.= "{$value[$i]}, ");
+                            $message.= " <b>$value[$i] %</b> ";
+                        }
+                    } else
+                    {
+                        $sql.= "{$value}) ";
+                        $message.= " <b>$value %</b> ";
+                    }
+                    break;
+                case 'country':
+                    $message.= '<br>Страна-изготовитель: ';
+                    $sql.= " AND (";
+                    if(is_array($value))
+                    {
+                        for($i = 0; $i < count($value); $i++)
+                        {
+                            ($i==0 ? $sql.= " {$key} LIKE '%{$value[$i]}%' ": $sql.= "OR {$key} LIKE '%{$value[$i]}%' " );
+                            $message.= "<b> $value[$i]</b> ";
+                        }
+                    } else
+                    {
+                        $sql.= " {$key} LIKE '%{$value}%' ";
+                        $message.= " <b>$value</b> ";
+                    }
+                    $sql.= ")";
+                    break;
+            }
+        }
+
+        $result_for_count = $this->db->query($sql);
+        $count = count($result_for_count);
+
+        if(!$pagination) {
+            $sql.= " LIMIT 5 ";
+        }
+        else{
+            $number = 5*($pagination-1);
+            $sql.= " LIMIT {$number},5 ";
+        }
+
+  
+        $result = $this->db->query($sql);
+        $result[0]['count'] = $count;
+        $result[0]['message'] = $message;
+        $result[0]['search']=$sql;
+        return $result;
+    }
 }

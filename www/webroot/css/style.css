@@ -3,6 +3,15 @@ body{
     font-family: Century Gothic;
 
     }
+.uc-title{
+    font-size: 16px;
+    color: #783c1a;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+}
 
 #top-bar {
     text-align: center;
@@ -77,15 +86,16 @@ ul.top-phones li span.code {
     border: 1px solid #783c1a;
     border-radius: 3px;
     padding-left: 10px;
+    background-color: whitesmoke;
 
 }
-#search-btn{
+.search-btn{
     border: 1px solid #783c1a;
     border-radius: 3px;
     background: #dac6ad;
     box-shadow: 0 0 2px rgba(0,0,0,0.5);
 }
-#search-btn:hover {
+.search-btn:hover {
     background: #b87d3b;
 
     }
@@ -198,6 +208,18 @@ ul.top-phones li span.code {
 #whide-search-container{
     margin: 25px;
 }
+.whide-search-head{
+    height: auto;
+    overflow: auto;
+    padding: 2px;
+    background-color: #dac6ad;
+    color: #783c1a;
+    /*border: 1px solid whitesmoke;*/
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2px;
+
+}
 .separator hr{
     background-color: white;
     height: 1px;
@@ -222,9 +244,22 @@ ul.top-phones li span.code {
     color: #783c1a;
     font-size: 14px;
     background-color: whitesmoke;
+
 }
 #country-filter option{
-    background-color: whitesmoke;}
+    background-color: whitesmoke;
+}
+.filter-massage{
+    padding: 15px;
+    height: auto;
+    border-radius: 2px;
+    background: whitesmoke ;
+    font-size: 15px;
+
+
+    display: block;
+
+}
 
 /*фильтр по цене */
 
