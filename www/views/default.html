@@ -159,7 +159,18 @@
     <script src="/js/subscribe_window/config.js"></script>
     <script src="/js/subscribe_window/jquery.arcticmodal.js"></script>
     <script>
-
+        $("a[id|='add']").on('click', function() {
+            id = $(this).attr('id').split('-');
+            id = id[1];
+            $.ajax({
+                url: '/cart/add/'+ id,
+                method: 'POST',
+                data: {text: textValue}
+                }).done(function () {
+                alert('Product '+ id + ' added')
+            });
+//            $.post('cart.php?action=add&id=' + id, alert('Product ' + id + ' added'));
+        });
     </script>
 
 </body>

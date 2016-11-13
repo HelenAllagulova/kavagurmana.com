@@ -14,7 +14,6 @@ function prod_format(param) {
             var elem_grid = document.getElementById('grid_format');
             elem_grid.style.display = 'none';
             var elem_gl_grid = document.getElementById('gl-grid');
-            console.log(elem_gl_grid);
             elem_gl_grid.style.color = '#783c1a';
             var elem_list = document.getElementById('list_format');
             elem_list.style.display = 'block';
