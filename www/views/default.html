@@ -10,7 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
     <script src="https://code.jquery.com/jquery.min.js"></script>
-
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
     <script src="/js/products_format.js"></script>
     <script src="/js/ajax.js"></script>
@@ -162,14 +163,16 @@
         $("a[id|='add']").on('click', function() {
             id = $(this).attr('id').split('-');
             id = id[1];
+
             $.ajax({
-                url: '/cart/add/'+ id,
+                url: '/cart/addProduct/'+ id,
                 method: 'POST',
-                data: {text: textValue}
-                }).done(function () {
-                alert('Product '+ id + ' added')
+                data: {'item_id': id}
+                }).done(function (data) {
+//                alert('Product '+ id + ' added')
+                alert(data)
+
             });
-//            $.post('cart.php?action=add&id=' + id, alert('Product ' + id + ' added'));
         });
     </script>
 
