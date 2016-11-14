@@ -14,10 +14,10 @@ abstract class Cookie
         return null;
     }
 
-    public static function delete($key)
+    public static function delete($key, $time = -3600)
     {
         if ( isset($_COOKIE[$key]) ){
-            self::set($key, '', -3600);
+            self::set($key, '', $time);
             unset($_COOKIE[$key]);
         }
     }
