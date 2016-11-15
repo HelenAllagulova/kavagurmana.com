@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eabfe8d1-4f3a-4b72-856c-c265d850590b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/controllers/cart.controller.php" afterPath="$PROJECT_DIR$/www/controllers/cart.controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/default.html" afterPath="$PROJECT_DIR$/www/views/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/webroot/css/style.css" afterPath="$PROJECT_DIR$/www/webroot/css/style.css" />
     </list>
     <ignored path="kavagurmana.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="default.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/views/default.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -47,6 +46,16 @@
                 <element signature="n#style#0;n#form#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#form#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/webroot/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -211,7 +220,6 @@
         <option value="$PROJECT_DIR$/www/models/bars.model.php" />
         <option value="$PROJECT_DIR$/www/lib/init.php" />
         <option value="$PROJECT_DIR$/www/views/bars/left_filter.html" />
-        <option value="$PROJECT_DIR$/www/webroot/css/style.css" />
         <option value="$PROJECT_DIR$/www/views/products/widesearch.html" />
         <option value="$PROJECT_DIR$/www/controllers/products.controller.php" />
         <option value="$PROJECT_DIR$/www/webroot/js/ajax.js" />
@@ -223,6 +231,7 @@
         <option value="$PROJECT_DIR$/www/views/cart/addproduct.html" />
         <option value="$PROJECT_DIR$/www/controllers/cart.controller.php" />
         <option value="$PROJECT_DIR$/www/views/default.html" />
+        <option value="$PROJECT_DIR$/www/webroot/css/style.css" />
       </list>
     </option>
   </component>
@@ -557,7 +566,7 @@
       <workItem from="1479114923805" duration="5867000" />
       <workItem from="1479123634442" duration="48000" />
       <workItem from="1479155699085" duration="9124000" />
-      <workItem from="1479215565174" duration="16043000" />
+      <workItem from="1479215565174" duration="16393000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1478458439951</created>
@@ -570,7 +579,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="357322000" />
+    <option name="totallyTimeSpent" value="357672000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -591,7 +600,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32352942" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32242227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -820,13 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/webroot/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4182">
-          <caret line="246" column="0" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/views/products/widesearch.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
@@ -1028,6 +1030,14 @@
             <element signature="n#style#0;n#form#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#form#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/webroot/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

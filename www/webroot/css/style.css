@@ -101,9 +101,8 @@ ul.top-phones li span.code {
     }
 .search-block{
     margin: 0;
-    padding-top: 10px;
-    padding-right: 40px;
-    text-align: left;
+    padding-top: 12px;
+    padding-left: 20px;
     display: inline-block;
     list-style-type: none;
     float: left;
