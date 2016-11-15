@@ -10,7 +10,7 @@ class CartController extends Controller{
      *
      * @var array|mixed
      */
-    private $products;
+    private $products = [];
 
 
     /**
@@ -19,11 +19,11 @@ class CartController extends Controller{
     public function __construct($data = array())
     {
         parent::__construct($data);
-        var_dump(Cookie::get('item'));
-        if(Cookie::get('item') == false){
-            $this->products = array();
-        } else {
-            $this->products = json_decode(Cookie::get('item'));
+
+        if(!Cookie::get('cart') == null){
+
+            $this->products = json_decode(Cookie::get('cart'), true);
+            var_dump($this->products);
         }
     }
 
@@ -48,16 +48,23 @@ class CartController extends Controller{
      *
      * @param $id
      */
-    public function addProduct()
+    public function addProduct($quantity=1)
     {
 
-        $id = $this->params[0];
-        if (!in_array($id, $this->products)) {
-            array_push($this->products, $id);
+        $id = (int)($this->params[0]);
+
+        if (!array_key_exists($id, $this->products)) {
+            $this->products[$id] = $quantity;
         }
 
-        Cookie::set('item', json_encode($this->products));
-        die;
+        Cookie::set('cart', json_encode($this->products));
+
+        $count_products = count($this->products);
+        var_dump($count_products);
+//        $ids_sql = $this->getProducts(true);
+//        $this->model = new ProductsModel();
+//        $this->data['cart'] = $this->model->getByIds($ids_sql);
+//        var_dump($this->data['cart']);
     }
 
 
@@ -75,7 +82,7 @@ class CartController extends Controller{
             unset($this->products[$key]);
         }
 
-        Cookie::set('item', serialize($this->products));
+        Cookie::set('cart', serialize($this->products));
     }
 
 
@@ -84,7 +91,7 @@ class CartController extends Controller{
      */
     public function clear()
     {
-        Cookie::delete('item');
+        Cookie::delete('cart');
     }
 
 

@@ -300,4 +300,10 @@ class ProductsModel extends Model
         $result[0]['search']=$sql;
         return $result;
     }
+
+    public function getByIds($ids){
+        $sql = "SELECT * FROM products WHERE id IN ({$ids})";
+        $result = $this->db->query($sql);
+        return $result;
+    }
 }
