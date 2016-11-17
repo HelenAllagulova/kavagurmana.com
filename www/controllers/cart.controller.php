@@ -44,13 +44,16 @@ class CartController extends Controller{
     /**
      * adding product
      *
-     * @param $id
+     * @param $quantity
      */
     public function addProduct($quantity=1)
     {
-        $id = (int)($this->params[0]);
-        if (!array_key_exists($id, $this->products)) {
-            $this->products[$id] =(int)($quantity);
+        if(!empty($this->products)){
+            if(isset($this->params[0])) {
+            $id = (int)($this->params[0]);
+            if (!array_key_exists($id, $this->products)) {
+                $this->products[$id] = (int)($quantity);
+            }
         }
         Cookie::set('cart', json_encode($this->products));
         $count_products = array_sum($this->products);
@@ -69,9 +72,9 @@ class CartController extends Controller{
                 }
             }
         $cart_str = "<b>{$count_products}</b> товаров на сумму <b>{$all_sum}</b> грн.";
-        echo $cart_str;
-        die();
-    }
+            echo $cart_str;
+            die();
+    }}
 
 
     /**
