@@ -46,11 +46,12 @@ class CartController extends Controller{
      *
      * @param $quantity
      */
-    public function addProduct($quantity=1)
+    public function addProduct()
     {
         // if add new product into cart
         if(isset($this->params[0])) {
             $id = (int)($this->params[0]);
+            $quantity = (int)($this->params[1]);
             if (!array_key_exists($id, $this->products)) {
                 $this->products[$id] = (int)($quantity);
             }

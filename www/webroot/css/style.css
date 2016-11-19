@@ -17,19 +17,26 @@ body{
     text-align: center;
     background: #dac6ad;
     color: #783c1a;
-    padding: 5px 0;
+    padding: 5px;
+    height: auto;
     margin: 0;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+
 }
 
 #top-bar.wrapper {
     max-width: 1300px;
     margin: 0 auto;
+    height: auto;
     text-align: center;
     font-family: "Century Gothic";
+
 }
 .wrapper{
     max-width: 1300px;
     display: block;
+    height: auto;
     /*осн часть по середине*/
     margin: 0 auto;
 }
@@ -37,7 +44,7 @@ body{
 .top-img {
     margin: 0;
     padding: 0;
-    display: inline-block;
+    display: block;
     z-index: 1;
     list-style-type: none;
     float: left;
@@ -45,7 +52,8 @@ body{
 
 }
 .top-img img{
-    height: 55px;
+    height: 60px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
 }
 #logo-text {
     font-size: 27px;
@@ -56,6 +64,8 @@ body{
     margin: 0;
     margin-left: 30px;
     padding-top: 5px;
+    height: auto;
+
 
 
 }
@@ -63,6 +73,8 @@ body{
     text-decoration: none;
     color: #783c1a;
     letter-spacing: 1px;
+    height: auto;
+
 }
 
 ul.top-phones {
@@ -76,6 +88,7 @@ ul.top-phones {
     height: 55px;
     border-left: 1px solid #783c1a;
     border-right: 1px solid #783c1a;
+
     font-size: 18px;
 }
 ul.top-phones li span.code {
@@ -321,6 +334,9 @@ ul.top-phones li span.code {
     padding: 10px;
     margin-top: 30px;
     height: 320px;
+}
+#quantity{
+    width: 40px;
 }
 .list-view{
     border: 2px solid #dac6ad;

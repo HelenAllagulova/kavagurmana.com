@@ -34,12 +34,14 @@
                 <div class="item-price"><span><?=$data['product']['price']?> </span>грн</div>
             </div>
             <div class="col-sm-6 col-md-6">
-                <form action="" method="post" class="form-inline">
+                <div class="form-inline">
                     <div class="form-group">
-                        <input type="number" step="1" min="1" max="10" name="quantity" value="1">
+                        <input type="number" step="1" min="1" max="10"  id="quantity" name="quantity" value="1">
                     </div>&nbsp;&nbsp;&nbsp;
-                    <button class="btn-default btn" type="submit"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> в корзину </button>
-                </form>
+                    <a id="add-<?=$data['product']['id']?>">
+                    <button  class="btn-default btn" type="submit"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> в корзину </button>
+                    </a>
+                </div>
             </div>
 
             <div class="col-sm-12 col-md-12">

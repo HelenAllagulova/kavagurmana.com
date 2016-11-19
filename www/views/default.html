@@ -162,13 +162,14 @@
     <script src="/js/subscribe_window/jquery.arcticmodal.js"></script>
     <script>
         $("a[id|='add']").on('click', function() {
+            quantity = typeof($('#quantity').val())!= 'undefined' ? $('#quantity').val() : 1;
             id = $(this).attr('id').split('-');
             id = id[1];
 
             $.ajax({
-                url: '/cart/addProduct/'+ id,
+                url: '/cart/addProduct/' + id + '/' + quantity,
                 method: 'POST',
-                data: {'item_id': id}
+                data: {'id': id, 'quantity': quantity}
                 }).done(function (data) {
                     str=data;
                     $('#cart_inticator').html(str);
