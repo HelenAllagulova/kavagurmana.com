@@ -192,13 +192,16 @@
     </script>
     <script>
         $("input[id|='quantity']").on('change', function() {
-
             quantity = $(this).val();
             id = $(this).attr('id').split('-');
             id = id[1];
+            intotal_old = $('#intotal-'+id).html();
             price = $('#price-'+id).html();
             intotal = price*quantity;
+            delta = intotal-intotal_old;
+            ttp = +($('#totaltopay').html()) + delta;
             $('#intotal-'+id).html(intotal);
+            $('#totaltopay').html(ttp);
             $.ajax({
                 url: '/cart/editquantity/' + id + '/' + quantity,
                 method: 'POST',
@@ -206,6 +209,22 @@
             }).done(function (data) {
                 $('#cart_inticator').html(data);
             });
+        });
+    </script>
+    <script>
+        $("button[id|='del']").on('click', function() {
+            id = $(this).attr('id').split('-');
+            id = id[1];
+            alert(id);
+            $.ajax({
+                url: '/cart/delete/' + id,
+                method: 'POST',
+                data: {'id': id}
+            }).done(function (data) {
+                str=data;
+                $('#cart_inticator').html(str);
+            });
+
         });
     </script>
 </body>

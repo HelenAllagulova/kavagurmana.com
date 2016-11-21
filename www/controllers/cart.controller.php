@@ -81,14 +81,11 @@ class CartController extends Controller{
     {
         if (!empty($this->products))
         $this->data['cart'] = $this->getCart();
-        
-    }
 
+    }
 
     /**
      * adding product
-     *
-     * @param $quantity
      */
     public function addProduct()
     {
@@ -115,6 +112,9 @@ class CartController extends Controller{
     }
 
 
+    /**
+     * edit quantity products in cart
+     */
     public function editquantity(){
         if(isset($this->params[0])) {
             $id = (int)($this->params[0]);
@@ -134,19 +134,17 @@ class CartController extends Controller{
 
     /**
      * deleting product
-     *
-     * @param $id
      */
-    public function deleteProduct($id)
+    public function delete()
     {
-        $id = (int)$id;
-
-        $key = array_search($id, $this->products);
+        $id = (int)($this->params[0]);
+        $key = array_key_exists($id, $this->products);
         if ($key !== false){
-            unset($this->products[$key]);
+            unset($this->products[$id]);
         }
-
-        Cookie::set('cart', serialize($this->products));
+        Cookie::set('cart', json_encode($this->products));
+        echo $this->indicator();
+        die();
     }
 
 

@@ -27,7 +27,7 @@
                 <td><span id="price-<?=$item['id']?>"><?=$item["price"]?></span></td>
                 <td><input type="number" step="1" min="1" max="100" id="quantity-<?=$item['id']?>" name="quantity" value="<?=$item['quantity']?>"></td>
                 <td><span id="intotal-<?=$item['id']?>"><?=($item["price"]*$item["quantity"])?></span></td>
-                <td><button class="btn btn-xs"><b>x</b></button></td>
+                <td><button id="del-<?=$item['id']?>" class="btn btn-xs"><b>x</b></button></td>
             </tr>
             <?php } ?>
         <tr>
@@ -35,7 +35,7 @@
             <td></td>
             <td></td>
             <th>к оплате</th>
-            <th><?=$data['cart'][0]['total_sum']?> грн.</th>
+            <th><span id="totaltopay"><?=$data['cart'][0]['total_sum']?></span> грн.</th>
             <td></td>
         </tr>
         </tbody>
