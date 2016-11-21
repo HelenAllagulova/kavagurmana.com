@@ -1,1 +1,43 @@
-hi from cart
+
+<meta charset="UTF-8">
+<div class="col-md-12 sort-text">
+    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+    <span> оформление заказа </span>
+
+</div>
+<div class="col-md-12">
+    <br>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Наименование товара</th>
+                <th>Цена, грн.</th>
+                <th>Количество</th>
+                <th>Итого, грн.</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($data['cart'] as $item){?>
+            <tr>
+                <td><img src="<?=$item['img_path']?>" style="height: 40px"></td>
+                <td><?=$item["brand"]?><?=$item["name"]?> <?=$item["weight"]?></td>
+                <td><?=$item["price"]?></td>
+                <td><input type="number" step="1" min="1" max="100" id="quantity" name="quantity" value="<?=$item['quantity']?>"></td>
+                <td><?=($item["price"]*$item["quantity"])?></td>
+                <td><button class="btn btn-xs"><b>x</b></button></td>
+            </tr>
+            <?php } ?>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th>к оплате</th>
+            <th><?=$data['cart'][0]['total_sum']?> грн.</th>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

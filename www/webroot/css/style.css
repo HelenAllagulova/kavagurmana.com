@@ -110,8 +110,14 @@ ul.top-phones li span.code {
 }
 .search-btn:hover {
     background: #b87d3b;
-
     }
+.cart_main a{
+    color: #783c1a;
+    text-decoration: none;
+}
+.cart_main a:hover {
+    color: #b87d3b;
+}
 .search-block{
     margin: 0;
     padding-top: 12px;
@@ -519,3 +525,4 @@ ul.top-phones li span.code {
 .button-240{
     width: 240px;
 }
+

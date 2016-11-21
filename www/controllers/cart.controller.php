@@ -40,6 +40,45 @@ class CartController extends Controller{
         return $this->products;
     }
 
+    /**
+     * cart getter
+     *
+     * @return mixed
+     */
+    public function getCart()
+    {
+        $ids_sql = $this->getProducts(true);
+        $this->model = new ProductsModel();
+        $this->data['cart'] = $this->model->getByIds($ids_sql);
+        $sum=[];
+        $all_sum = 0;
+        foreach ($this->products as $key => $value){
+            for ($i=0; $i< count($this->data['cart']); $i++){
+                if((int)($this->data['cart'][$i]['id'])==$key){
+                    $this->data['cart'][$i]['quantity'] = $value;
+                    $sum[$key]= $this->data['cart'][$i]['price']*$value;
+                    $all_sum += $sum[$key];
+                }
+                continue;
+            }
+        }
+        $this->data['cart'][0]['total_sum'] = $all_sum;
+//        ddd($this->data['cart']);
+        return $this->data['cart'];
+    }
+
+    /**
+     * products show
+     *
+     * @return mixed
+     */
+    public function show()
+    {
+        $this->data['cart'] = $this->getCart();
+//        ddd($this->data['cart']);
+//        return $this->data['cart'];
+    }
+
 
     /**
      * adding product
@@ -54,6 +93,8 @@ class CartController extends Controller{
             $quantity = (int)($this->params[1]);
             if (!array_key_exists($id, $this->products)) {
                 $this->products[$id] = (int)($quantity);
+            }else{
+                $this->products[$id] += (int)($quantity);
             }
         }
         // if empty cart
