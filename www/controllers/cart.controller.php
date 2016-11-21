@@ -66,12 +66,22 @@ class CartController extends Controller{
         return $this->data['cart'];
     }
 
+    public function indicator(){
+        $count_products = array_sum($this->products);
+        $this->data['cart'] = $this->getCart();
+        $all_sum = $this->data['cart'][0]['total_sum'] ;
+        $cart_str = "<b>{$count_products}</b> товаров на сумму <b>{$all_sum}</b> грн.";
+        return $cart_str;
+    }
+
     /**
      * products show
      */
     public function show()
     {
+        if (!empty($this->products))
         $this->data['cart'] = $this->getCart();
+        
     }
 
 
@@ -99,14 +109,11 @@ class CartController extends Controller{
         }
         Cookie::set('cart', json_encode($this->products));
 
-        $count_products = array_sum($this->products);
-        $this->data['cart'] = $this->getCart();
-        $all_sum = $this->data['cart'][0]['total_sum'] ;
-        $cart_str = "<b>{$count_products}</b> товаров на сумму <b>{$all_sum}</b> грн.";
-        echo $cart_str;
+        echo $this->indicator();
         die();
 
     }
+
 
     public function editquantity(){
         if(isset($this->params[0])) {
@@ -119,11 +126,8 @@ class CartController extends Controller{
             }
         }
         Cookie::set('cart', json_encode($this->products));
-        $count_products = array_sum($this->products);
-        $this->data['cart'] = $this->getCart();
-        $all_sum = $this->data['cart'][0]['total_sum'] ;
-        $cart_str = "<b>{$count_products}</b> товаров на сумму <b>{$all_sum}</b> грн.";
-        echo $cart_str;
+
+        echo $this->indicator();
         die();
     }
 

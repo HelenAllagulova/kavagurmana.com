@@ -7,6 +7,7 @@
 </div>
 <div class="col-md-12">
     <br>
+    <?php if(!empty($data['cart'])){?>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -22,10 +23,10 @@
             <?php foreach($data['cart'] as $item){?>
             <tr>
                 <td><img src="<?=$item['img_path']?>" style="height: 40px"></td>
-                <td><?=$item["brand"]?><?=$item["name"]?> <?=$item["weight"]?></td>
-                <td><?=$item["price"]?></td>
+                <td><?=$item["brand"]?><?=$item["name"]?> <?=$item["weight"]?>г.</td>
+                <td><span id="price-<?=$item['id']?>"><?=$item["price"]?></span></td>
                 <td><input type="number" step="1" min="1" max="100" id="quantity-<?=$item['id']?>" name="quantity" value="<?=$item['quantity']?>"></td>
-                <td><?=($item["price"]*$item["quantity"])?></td>
+                <td><span id="intotal-<?=$item['id']?>"><?=($item["price"]*$item["quantity"])?></span></td>
                 <td><button class="btn btn-xs"><b>x</b></button></td>
             </tr>
             <?php } ?>
@@ -39,5 +40,7 @@
         </tr>
         </tbody>
     </table>
-
+    <?php } else{?>
+    <h4> Ваша корзина пуста</h4>
+    <?php } ?>
 </div>

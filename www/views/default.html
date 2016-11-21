@@ -196,13 +196,15 @@
             quantity = $(this).val();
             id = $(this).attr('id').split('-');
             id = id[1];
+            price = $('#price-'+id).html();
+            intotal = price*quantity;
+            $('#intotal-'+id).html(intotal);
             $.ajax({
                 url: '/cart/editquantity/' + id + '/' + quantity,
                 method: 'POST',
                 data: {'id': id, 'quantity': quantity}
             }).done(function (data) {
-                str=data;
-                $('#cart_inticator').html(str);
+                $('#cart_inticator').html(data);
             });
         });
     </script>
