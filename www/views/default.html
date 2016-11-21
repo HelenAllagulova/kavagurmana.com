@@ -192,18 +192,18 @@
     </script>
     <script>
         $("input[id|='quantity']").on('change', function() {
-            alert("Haai");
-//            quantity = typeof($('#quantity').val())!= 'undefined' ? $('#quantity').val() : 1;
-//            id = $(this).attr('id').split('-');
-//            id = id[1];
-//            $.ajax({
-//                url: '/cart/addProduct/' + id + '/' + quantity,
-//                method: 'POST',
-//                data: {'id': id, 'quantity': quantity}
-//            }).done(function (data) {
-//                str=data;
-//                $('#cart_inticator').html(str);
-//            });
+
+            quantity = $(this).val();
+            id = $(this).attr('id').split('-');
+            id = id[1];
+            $.ajax({
+                url: '/cart/editquantity/' + id + '/' + quantity,
+                method: 'POST',
+                data: {'id': id, 'quantity': quantity}
+            }).done(function (data) {
+                str=data;
+                $('#cart_inticator').html(str);
+            });
         });
     </script>
 </body>

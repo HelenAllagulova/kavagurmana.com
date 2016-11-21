@@ -4,7 +4,6 @@
     <list default="true" id="eabfe8d1-4f3a-4b72-856c-c265d850590b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/controllers/cart.controller.php" afterPath="$PROJECT_DIR$/www/controllers/cart.controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/cart/show.html" afterPath="$PROJECT_DIR$/www/views/cart/show.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/default.html" afterPath="$PROJECT_DIR$/www/views/default.html" />
     </list>
     <ignored path="kavagurmana.iws" />
@@ -33,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="default.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/views/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="193" column="30" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="30" />
+            <state relative-caret-position="361">
+              <caret line="204" column="37" selection-start-line="204" selection-start-column="37" selection-end-line="204" selection-end-column="37" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -62,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.controller.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cart.controller.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/controllers/cart.controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+            <state relative-caret-position="310">
+              <caret line="118" column="13" selection-start-line="118" selection-start-column="13" selection-end-line="118" selection-end-column="13" />
               <folding>
                 <element signature="e#11#50#0#PHP" expanded="true" />
               </folding>
@@ -180,9 +179,9 @@
         <option value="$PROJECT_DIR$/www/lib/router.class.php" />
         <option value="$PROJECT_DIR$/www/lib/app.class.php" />
         <option value="$PROJECT_DIR$/www/webroot/css/style.css" />
-        <option value="$PROJECT_DIR$/www/controllers/cart.controller.php" />
-        <option value="$PROJECT_DIR$/www/views/default.html" />
         <option value="$PROJECT_DIR$/www/views/cart/show.html" />
+        <option value="$PROJECT_DIR$/www/views/default.html" />
+        <option value="$PROJECT_DIR$/www/controllers/cart.controller.php" />
       </list>
     </option>
   </component>
@@ -627,7 +626,7 @@
       <workItem from="1479414882003" duration="5599000" />
       <workItem from="1479456559978" duration="3982000" />
       <workItem from="1479567797754" duration="18087000" />
-      <workItem from="1479655279958" duration="12775000" />
+      <workItem from="1479655279958" duration="15199000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1478458439951</created>
@@ -640,7 +639,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="401081000" />
+    <option name="totallyTimeSpent" value="403505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -652,7 +651,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
+    <frame x="-7" y="0" width="1378" height="735" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3474962" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -661,7 +660,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29900333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29900333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1074,16 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/cart.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
-          <folding>
-            <element signature="e#11#50#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/lib/view.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -1104,8 +1093,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="193" column="30" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="30" />
+        <state relative-caret-position="361">
+          <caret line="204" column="37" selection-start-line="204" selection-start-column="37" selection-end-line="204" selection-end-column="37" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1115,6 +1104,16 @@
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#form#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#form#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/controllers/cart.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="118" column="13" selection-start-line="118" selection-start-column="13" selection-end-line="118" selection-end-column="13" />
+          <folding>
+            <element signature="e#11#50#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
