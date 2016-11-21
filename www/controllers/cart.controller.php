@@ -88,6 +88,7 @@ class CartController extends Controller{
     public function addProduct()
     {
         // if add new product into cart
+        //ToDo gthtltkfnm c методом add cart
         if(isset($this->params[0])) {
             $id = (int)($this->params[0]);
             $quantity = (int)($this->params[1]);

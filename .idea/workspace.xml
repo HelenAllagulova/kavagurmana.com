@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="eabfe8d1-4f3a-4b72-856c-c265d850590b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/access.log" afterPath="$PROJECT_DIR$/logs/access.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log" afterPath="$PROJECT_DIR$/logs/error.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/controllers/cart.controller.php" afterPath="$PROJECT_DIR$/www/controllers/cart.controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/app.class.php" afterPath="$PROJECT_DIR$/www/lib/app.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/router.class.php" afterPath="$PROJECT_DIR$/www/lib/router.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/view.class.php" afterPath="$PROJECT_DIR$/www/lib/view.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/cart/show.html" afterPath="$PROJECT_DIR$/www/views/cart/show.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/default.html" afterPath="$PROJECT_DIR$/www/views/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/webroot/css/style.css" afterPath="$PROJECT_DIR$/www/webroot/css/style.css" />
     </list>
     <ignored path="kavagurmana.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +36,8 @@
       <file leaf-file-name="default.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/views/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="182" column="4" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
+            <state relative-caret-position="164">
+              <caret line="193" column="30" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="30" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -71,8 +65,8 @@
       <file leaf-file-name="cart.controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/controllers/cart.controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1309">
-              <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+            <state relative-caret-position="250">
+              <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
               <folding>
                 <element signature="e#11#50#0#PHP" expanded="true" />
               </folding>
@@ -83,8 +77,8 @@
       <file leaf-file-name="show.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/views/cart/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+            <state relative-caret-position="238">
+              <caret line="26" column="94" selection-start-line="26" selection-start-column="94" selection-end-line="26" selection-end-column="94" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
               </folding>
@@ -95,7 +89,7 @@
       <file leaf-file-name="view.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/lib/view.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="334">
               <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
               <folding />
             </state>
@@ -183,11 +177,11 @@
         <option value="$PROJECT_DIR$/logs/access.log" />
         <option value="$PROJECT_DIR$/www/views/cart/getProducts.html" />
         <option value="$PROJECT_DIR$/www/lib/view.class.php" />
-        <option value="$PROJECT_DIR$/www/views/default.html" />
         <option value="$PROJECT_DIR$/www/lib/router.class.php" />
-        <option value="$PROJECT_DIR$/www/controllers/cart.controller.php" />
         <option value="$PROJECT_DIR$/www/lib/app.class.php" />
         <option value="$PROJECT_DIR$/www/webroot/css/style.css" />
+        <option value="$PROJECT_DIR$/www/controllers/cart.controller.php" />
+        <option value="$PROJECT_DIR$/www/views/default.html" />
         <option value="$PROJECT_DIR$/www/views/cart/show.html" />
       </list>
     </option>
@@ -633,7 +627,7 @@
       <workItem from="1479414882003" duration="5599000" />
       <workItem from="1479456559978" duration="3982000" />
       <workItem from="1479567797754" duration="18087000" />
-      <workItem from="1479655279958" duration="10668000" />
+      <workItem from="1479655279958" duration="12775000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1478458439951</created>
@@ -646,7 +640,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="398974000" />
+    <option name="totallyTimeSpent" value="401081000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -667,7 +661,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255814" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29900333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -873,6 +867,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -887,6 +882,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5168">
           <caret line="304" column="59" selection-start-line="304" selection-start-column="59" selection-end-line="304" selection-end-column="59" />
+          <folding>
+            <marker date="1479163795052" expanded="true" signature="136:166" placeholder="select * fro... products" />
+            <marker date="1479163795052" expanded="true" signature="611:651" placeholder="SELECT COUNT... products" />
+            <marker date="1479163795052" expanded="true" signature="800:877" placeholder="SELECT COUNT... products" />
+            <marker date="1479163795052" expanded="true" signature="2135:2660" placeholder="INSERT INTO products... " />
+            <marker date="1479163795052" expanded="true" signature="2997:3081" placeholder="UPDATE produ... " />
+            <marker date="1479163795052" expanded="true" signature="3245:3826" placeholder="UPDATE produ... " />
+            <marker date="1479163795052" expanded="true" signature="4013:4062" placeholder="SELECT * FRO... products" />
+            <marker date="1479163795052" expanded="true" signature="4274:4335" placeholder="SELECT * FRO... products" />
+            <marker date="1479163795052" expanded="true" signature="4487:4509" placeholder="SELECT * FRO... products" />
+            <marker date="1479163795052" expanded="true" signature="5980:6012" placeholder="delete from " />
+            <marker date="1479163795052" expanded="true" signature="6211:6270" placeholder="SELECT * FRO... products" />
+            <marker date="1479163795052" expanded="true" signature="6807:6831" placeholder="..." />
+            <marker date="1479163795052" expanded="true" signature="7178:7216" placeholder="SELECT * FRO... products" />
+            <marker date="1479163795052" expanded="true" signature="10696:10727" placeholder="SELECT * FRO... products" />
+            <marker date="1479163795052" expanded="true" signature="10696:10730" placeholder="SELECT * FRO... products" />
+            <marker date="1479163795052" expanded="true" signature="10696:10739" placeholder="SELECT * FRO... products" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1023,28 +1036,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/view.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/lib/router.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/controllers/cart.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-          <folding>
-            <element signature="e#11#50#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1079,10 +1074,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/controllers/cart.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+          <folding>
+            <element signature="e#11#50#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/lib/view.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/views/cart/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        <state relative-caret-position="238">
+          <caret line="26" column="94" selection-start-line="26" selection-start-column="94" selection-end-line="26" selection-end-column="94" />
           <folding>
             <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
           </folding>
@@ -1091,8 +1104,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="182" column="4" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
+        <state relative-caret-position="164">
+          <caret line="193" column="30" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="30" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
